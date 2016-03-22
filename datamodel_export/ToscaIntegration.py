@@ -1,7 +1,7 @@
 import cloudshell.api.cloudshell_api as api
 import re
 import yaml
-
+import sys
 
 class ExportCloudShellTypes:
     def export(self, cloudshell_server, user, password, domain):
@@ -10,7 +10,6 @@ class ExportCloudShellTypes:
         """
             :type models: cloudshell.api.cloudshell_api.ExportConfigurationInfo
         """
-        print models.Configuration
         import xml.etree.ElementTree as ET
         xmlstring = re.sub(' xmlns="[^"]+"', '', models.Configuration, count=1)
         tree = ET.fromstring(xmlstring)
@@ -34,7 +33,9 @@ class ExportCloudShellTypes:
 
         tosca ['node_types'] = node_types
 
-        with open('result.yml', 'w') as yaml_file:
+        with open('template.yaml', 'w') as yaml_file:
             yaml_file.write( yaml.dump(tosca, default_flow_style=False))
 
 
+
+ExportCloudShellTypes().export(sys.argv[1],sys.argv[2],sys.argv[3],"Global")
