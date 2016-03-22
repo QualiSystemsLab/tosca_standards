@@ -38,4 +38,3 @@ class ExportCloudShellTypes:
             yaml_file.write( yaml.dump(tosca, default_flow_style=False))
 
 
-ExportCloudShellTypes().export("10.211.55.4","admin","admin","Global")
