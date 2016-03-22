@@ -1,0 +1,45 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+ 
+description: Physical topology blueprint
+
+node_types:
+  cloudshell.nodes.switch:
+    derived_from: Root
+    properties:
+      vendor: 
+        type: string
+      model:
+        type: string
+
+  cloudshell.nodes.router:
+    derived_from: Root
+    properties:
+      vendor: 
+        type: string
+      model:
+        type: string
+ 
+
+topology_template:
+  node_templates:
+
+    network_switch1:
+      type: cloudshell.nodes.router 
+      properties:
+        vendor: "Cisco"
+        model: "Nexus7k"
+      requirements:
+        - router:
+            node: network_router1
+            relationship: my_connection
+
+    network_router1:
+      type: cloudshell.nodes.router 
+      properties:
+        vendor: "Cisco"
+        model: "4k"
+
+  relationship_templates:
+    my_connection:
+      type: ConnectsTo
+

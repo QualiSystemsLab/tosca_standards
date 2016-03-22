@@ -1,0 +1,64 @@
+description: CloudShell node types
+node_types:
+  cloudshell.nodes.AcmeSwitchInfinity:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Cisco 5108:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Cisco 5548:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Cisco 6120:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Cisco CRS1:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Cisco IOS Router:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Cisco IOS Switch:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Ethernet Port:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic App Model:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Chassis:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Deployed App:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Docker Host:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Module:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Port:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Port Channel:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Power Port:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Generic Sub Module:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.George:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Ixia XG12:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.MX960:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Metaswitchb:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Myrouter:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Temp Command Connector Model:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Traffic Generator Blade:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.VMware vCenter:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.VNX 5600:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.Wwss:
+    derived_from: cloudshell.nodes.resource
+  cloudshell.nodes.resource:
+    derived_from: root
+    properties:
+      vendor:
+        type: string
+  cloudshell.nodes.vCenter:
+    derived_from: cloudshell.nodes.resource
+tosca_definitions_version: tosca_simple_yaml_1_0
